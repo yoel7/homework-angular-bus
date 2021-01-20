@@ -1,10 +1,8 @@
 export interface bustrip {
-  date: string;
-  due: string;
+  date: Date;
   operator: string;
-  busId: string;
   price: string;
-  seats: number;
   source: string;
   dest: string;
+  serialNumber:number
 }
