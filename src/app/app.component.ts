@@ -10,12 +10,11 @@ import { trip } from './models/trip.model';
 })
 export class AppComponent {
   btrip: bustrip[];
-  
+
   constructor() {}
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  pusArTr(a: bustrip[]): void {
+    this.btrip = a;
+    // console.log(this.btrip)
   }
-  pusArTr(a:bustrip[]): void {
-    this.btrip=a; 
-    console.log(this.btrip)
-  }
-  }
+}
