@@ -7,6 +7,7 @@ import { bustrip } from '../models/bustrip.model';
 })
 export class DataService {
   constructor() {}
+  bustripfilter:bustrip[];
   bustrip2: bustrip[] = [
     {
       date: new Date(2021, 5, 6),

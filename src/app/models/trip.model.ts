@@ -1,5 +1,6 @@
 export interface trip {
     source: string;
     dest: string;
-    date: Date;
+    dateA: Date;
+    dateB: Date;
 }

@@ -1,5 +1,7 @@
 
-form button{
+form *{
     /* margin: 15px; */
     /* float: inline-end; */
+    align-content: center;
+
 }

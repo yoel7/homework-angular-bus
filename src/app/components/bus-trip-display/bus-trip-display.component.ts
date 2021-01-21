@@ -7,7 +7,7 @@ import { bustrip } from 'src/app/models/bustrip.model';
   styleUrls: ['./bus-trip-display.component.css']
 })
 export class BusTripDisplayComponent implements OnInit {
-  @Input() trip:bustrip={};
+  @Input() trip:bustrip;
   constructor() { }
 
   ngOnInit(): void {

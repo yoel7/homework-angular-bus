@@ -1,9 +1,10 @@
-<div style="margin-top: 2em;" class="container">
+<div style="margin-top: 2em;" class="container-fluid">
     <form class="row">
         <label class="col-3">מוצא : <input name="a"  [(ngModel)]="trip.source"  (input)="inputtrip()" /></label>
         <label class="col-3">יעד: <input name="b" [(ngModel)]="trip.dest" (input)="inputtrip()"/></label>
-        <label class="col-3">תאריך : <input name="c" [(ngModel)]="trip.date" type="date" /></label>
-        <button class="col-3 " (click)="createBusTrip()">Search</button>
+        <label class="col-3">-מ: <input name="c" [(ngModel)]="trip.dateA" type="date" /></label>
+        <label class="col-3">עד : <input name="d" [(ngModel)]="trip.dateB" type="date" (input)="inputTime()"/></label>
+        <button  (click)="createBusTrip()">Search</button>
     </form>
   <hr>
 <!-- <div>trip : <br>   {{trip | json}}</div> -->
