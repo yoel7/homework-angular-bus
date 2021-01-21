@@ -1,0 +1,10 @@
+<div style="margin-top: 2em;" class="container">
+    <form class="row">
+        <label class="col-3">מוצא : <input name="a"  [(ngModel)]="trip.source"  (input)="inputtrip()" /></label>
+        <label class="col-3">יעד: <input name="b" [(ngModel)]="trip.dest" (input)="inputtrip()"/></label>
+        <label class="col-3">תאריך : <input name="c" [(ngModel)]="trip.date" type="date" /></label>
+        <button class="col-3 " (click)="createBusTrip()">Search</button>
+    </form>
+  <hr>
+<!-- <div>trip : <br>   {{trip | json}}</div> -->
+    

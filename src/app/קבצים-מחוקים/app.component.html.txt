@@ -1,0 +1,21 @@
+<form>
+  <label>מוצא : <input name="a" [(ngModel)]="trip.source" /></label>
+  <label>יעד: <input name="b" [(ngModel)]="trip.dest" /></label>
+  <label>תאריך : <input name="c" [(ngModel)]="trip.date" type="date" /></label>
+  <button class="btn btn-success col-3" (click)="createTrip1()">Search</button>
+  </form>
+  <!-- <form> --
+  <label>מוצא : <input type="text" #source /></label>
+  <label>יעד: <input type="text" #dest /></label>
+  <label>תאריך : <input type="date" #date /></label>
+  <button class="btn btn-success col-3" (click)="createTrip({
+    source:source.value,
+    dest:dest.value,
+    date:date.value
+})">חיפוש</button>
+<!-- </form> -->
+
+{{ res | json }} 
+<div>trip : <br>
+{{trip | json}}
+</div>
