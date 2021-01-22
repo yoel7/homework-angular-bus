@@ -19,6 +19,7 @@ export class SearchComponent implements OnInit {
     dateA: null,
     dateB: null,
   };
+  
   constructor(private databus: DataService) {}
   ngOnInit(): void {}
 

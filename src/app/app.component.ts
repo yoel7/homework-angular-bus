@@ -10,11 +10,14 @@ import { trip } from './models/trip.model';
 })
 export class AppComponent {
   btrip: bustrip[];
-
-  constructor() {}
+  dataFiltSeri:bustrip[];  
+  constructor(private databus: DataService) {}
   ngOnInit(): void {}
-  pusArTr(a: bustrip[]): void {
-    this.btrip = a;
+  pusArTr(a?: bustrip[]): void {
+    // this.btrip = a;
     // console.log(this.btrip)
+    this.dataFiltSeri=this.databus.bustripfilter;
+    console.log(this.dataFiltSeri, 'dataFiltSeri');
+    
   }
 }
