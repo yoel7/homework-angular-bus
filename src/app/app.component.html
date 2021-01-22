@@ -1,7 +1,5 @@
 <app-search (pushArrTrip)="pusArTr($event)"></app-search>
-<app-bus-trip-display
-  *ngFor="let item of btrip" [trip]="item"
-></app-bus-trip-display>
+<app-bus-trip-display *ngFor="let item of btrip" [trip]="item"></app-bus-trip-display>
 <!-- <input type="text" list="cars" /> --
 < id="cars">
   <option>Volvo</option>
@@ -9,4 +7,3 @@
   <option>Mercedes</option>
   <option>Audi</option>
   <!-- </datalist> -->
-
