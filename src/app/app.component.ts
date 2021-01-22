@@ -9,11 +9,11 @@ import { trip } from './models/trip.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  btrip: bustrip[];
+  // btrip: bustrip[];
   dataFiltSeri:bustrip[];  
   constructor(private databus: DataService) {}
   ngOnInit(): void {}
-  pusArTr(a?: bustrip[]): void {
+  pusArTr(a?): void {
     // this.btrip = a;
     // console.log(this.btrip)
     this.dataFiltSeri=this.databus.bustripfilter;

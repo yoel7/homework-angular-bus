@@ -9,8 +9,8 @@ import { trip } from '../../models/trip.model';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  @Output() pushArrTrip: EventEmitter<Array<object>> = new EventEmitter<
-    Array<object>
+  @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<
+number
   >();
   data1: bustrip[];
   trip: trip = {
@@ -35,7 +35,7 @@ export class SearchComponent implements OnInit {
     this.databus.bustripfilter = this.databus.bustrip2.filter(
       (item) =>item.source == this.trip.source && item.dest == this.trip.dest && item.date > this.trip.dateA && item.date < this.trip.dateB
     );
-   this.pushArrTrip.emit(this.data1);
+   this.pushArrTrip.emit(1);
    
   }
   }
