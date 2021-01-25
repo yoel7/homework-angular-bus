@@ -9,25 +9,26 @@ import { trip } from '../../models/trip.model';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<
-number
-  >();
+  @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<number>();
   trip: trip = {
     source: 'א',
     dest: 'ב',
-    dateA: new Date(2021,0,19),
-    dateB: new Date(2021,0,21)
+    dateA: new Date(2021, 0, 19),
+    dateB: new Date(2021, 0, 21)
   };
-  
+
   constructor(private databus: DataService) {}
-  ngOnInit(): void {} 
+  ngOnInit(): void {}
   createBusTrip(): void {
     this.trip.dateA = new Date(this.trip.dateA);
     this.trip.dateB = new Date(this.trip.dateB);
     this.databus.bustripfilter = this.databus.bustrip2.filter(
-      (item) =>item.source == this.trip.source && item.dest == this.trip.dest && item.date > this.trip.dateA && item.date < this.trip.dateB
+      (item) =>
+        item.source == this.trip.source &&
+        item.dest == this.trip.dest &&
+        item.date > this.trip.dateA &&
+        item.date < this.trip.dateB
     );
-   this.pushArrTrip.emit(1);
-     }
+    this.pushArrTrip.emit(1);
+  }
 }
-

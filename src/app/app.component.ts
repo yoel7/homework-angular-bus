@@ -9,15 +9,9 @@ import { trip } from './models/trip.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
-  dataFiltSeri:bustrip[];  
-  constructor(private databus: DataService) {}
-  ngOnInit(): void {}
-  pusArTr(a?): void {
-    // this.btrip = a;
-    // console.log(this.btrip)
-    this.dataFiltSeri=this.databus.bustripfilter;
-    console.log(this.dataFiltSeri, 'dataFiltSeri');
-    
+  constructor() {}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
   }
 }
