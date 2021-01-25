@@ -1,10 +1,13 @@
+<h1>ffff</h1>
+
 <app-search (pushArrTrip)="pusArTr($event)"></app-search>
+
 <app-bus-trip-display
   *ngFor="let item of dataFiltSeri"
   [trip]="item"
 ></app-bus-trip-display>
-
-<!-- הערות לא חשובות -->
+<app-search></app-search>
+הערות לא חשובות
 <!-- <input type="text" list="cars" /> --
 < id="cars">
   <option>Volvo</option>
@@ -12,3 +15,4 @@
   <option>Mercedes</option>
   <option>Audi</option>
   <!-- </datalist> -->
+  
