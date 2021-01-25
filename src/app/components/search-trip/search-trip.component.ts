@@ -12,9 +12,12 @@ export class SearchTripComponent implements OnInit {
   dataFiltSeri: bustrip[];
   constructor(private databus: DataService) {}
   ngOnInit(): void {
-    this.dataFiltSeri = this.databus.bustripfilter;
+    // this.dataFiltSeri = this.databus.bustripfilter; 
+    //  מעניין מאוד למה א"א בלי האינפוט כמו בשורה למעלה הרי הכול רפרנסים
   }
   pusArTr(a?): void {
-    this.dataFiltSeri = this.databus.bustripfilter;
+    this.dataFiltSeri = this.databus.bustripfilter; 
+    console.log(this.dataFiltSeri, 'this.dataFiltSeri');
+    
   }
 }

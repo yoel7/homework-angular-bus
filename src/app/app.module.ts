@@ -18,8 +18,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
+    SearchTripComponent,
     BusTripDisplayComponent,
-    SearchComponent,
     HomeComponent
   ],
   imports: [

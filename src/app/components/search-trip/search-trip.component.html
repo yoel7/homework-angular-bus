@@ -1,18 +1,18 @@
-<h1>ffff</h1>
-
 <app-search (pushArrTrip)="pusArTr($event)"></app-search>
+<ng-container *ngIf='dataFiltSeri'>
+<app-bus-trip-display *ngFor="let item of dataFiltSeri" [trip]="item"></app-bus-trip-display>
+</ng-container>
+<!-- <app-search></app-search> -->
 
-<app-bus-trip-display
-  *ngFor="let item of dataFiltSeri"
-  [trip]="item"
-></app-bus-trip-display>
-<app-search></app-search>
-הערות לא חשובות
+<!-- הערות לא חשובות -->
 <!-- <input type="text" list="cars" /> --
 < id="cars">
   <option>Volvo</option>
   <option>Saab</option>
   <option>Mercedes</option>
   <option>Audi</option>
-  <!-- </datalist> -->
-  
+   </datalist> -->
+
+<!--  -->
+
+<!--  -->

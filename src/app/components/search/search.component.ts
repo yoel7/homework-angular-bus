@@ -20,6 +20,7 @@ export class SearchComponent implements OnInit {
   constructor(private databus: DataService) {}
   ngOnInit(): void {}
   createBusTrip(): void {
+    // console.log(this.trip.dateA);
     this.trip.dateA = new Date(this.trip.dateA);
     this.trip.dateB = new Date(this.trip.dateB);
     this.databus.bustripfilter = this.databus.bustrip2.filter(
