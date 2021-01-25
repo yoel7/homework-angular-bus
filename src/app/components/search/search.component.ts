@@ -12,23 +12,15 @@ export class SearchComponent implements OnInit {
   @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<
 number
   >();
-  data1: bustrip[];
   trip: trip = {
-    source: null,
-    dest: null,
-    dateA: null,
-    dateB: null,
+    source: 'א',
+    dest: 'ב',
+    dateA: new Date(2021,0,19),
+    dateB: new Date(2021,0,21)
   };
   
   constructor(private databus: DataService) {}
-  ngOnInit(): void {}
-
-  /* inputtrip() {
-    this.databus.bustripfilter = this.databus.bustrip2.filter(
-      (item) => item.source == this.trip.source && item.dest == this.trip.dest
-    );
-  }        */
-   
+  ngOnInit(): void {} 
   createBusTrip(): void {
     this.trip.dateA = new Date(this.trip.dateA);
     this.trip.dateB = new Date(this.trip.dateB);
@@ -36,8 +28,6 @@ number
       (item) =>item.source == this.trip.source && item.dest == this.trip.dest && item.date > this.trip.dateA && item.date < this.trip.dateB
     );
    this.pushArrTrip.emit(1);
-   
-  }
-  }
+     }
+}
 
-// import { from } from 'rxjs'; // חיליק למה הוספת את זה?

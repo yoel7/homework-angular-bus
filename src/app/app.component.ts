@@ -9,7 +9,7 @@ import { trip } from './models/trip.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // btrip: bustrip[];
+  
   dataFiltSeri:bustrip[];  
   constructor(private databus: DataService) {}
   ngOnInit(): void {}

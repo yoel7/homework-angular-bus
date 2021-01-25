@@ -41,7 +41,7 @@ export class DataService {
       dest: 'ירושלים',
       serialNumber:4
     },{
-      date: new Date(2021,0,20),
+      date: new Date(2021,0,20,10,36),
       operator: 'קווים',
       price: '1',
       source: 'א',
