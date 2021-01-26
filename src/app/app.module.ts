@@ -9,7 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { BusTripDisplayComponent } from './components/bus-trip-display/bus-trip-display.component';
 import { SearchTripComponent } from './components/search-trip/search-trip.component';
 import { HomeComponent } from './components/home/home.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'travel', component: SearchTripComponent }
@@ -26,11 +26,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     NgbModule,
-    HttpClient,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 // exports: [ RouterModule ]
