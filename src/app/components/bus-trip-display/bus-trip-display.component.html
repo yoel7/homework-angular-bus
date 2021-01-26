@@ -1,5 +1,10 @@
 <div class="row">
-  <div class="col-4">מוצא : {{ trip.source }}</div>
-  <div class="col-4">יעד : {{ trip.dest }}</div>
-  <div class="col-4">תאריך : {{ trip.date | date: "dd/MM/yyyy hh:mm" }}</div>
+  <div class="col-4" style="border:2px;border-style: double;
+  background-color: royalblue;padding: 4px; width: 4px; height: 35px;">מוצא : {{ trip.source }}</div>
+  <div class="col-4" style="border:2px;border-style: double;
+  background-color: royalblue;padding: 4px; width: 4px; height: 35px; border-left: red;">יעד : {{ trip.dest }}</div>
+  <div class="col-4" style="border:2px;border-style: double;
+  background-color: royalblue;padding: 4px; width: 4px; height: 35px; border-left: red;">תאריך : {{ trip.date | date:
+    "dd/MM/yyyy hh:mm"
+    }}</div>
 </div>
