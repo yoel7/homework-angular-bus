@@ -10,6 +10,8 @@ import { trip } from '../../models/trip.model';
 })
 export class SearchComponent implements OnInit {
   @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<number>();
+
+
   trip: trip = {
     source: 'א',
     dest: 'ב',
@@ -17,8 +19,8 @@ export class SearchComponent implements OnInit {
     dateB: new Date(2021, 0, 21)
   };
 
-  constructor(private databus: DataService) {}
-  ngOnInit(): void {}
+  constructor(private databus: DataService) { }
+  ngOnInit(): void { }
   createBusTrip(): void {
     // console.log(this.trip.dateA);
     this.trip.dateA = new Date(this.trip.dateA);
