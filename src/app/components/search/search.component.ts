@@ -10,7 +10,7 @@ import { GitApiService } from 'src/app/Services/git-api.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<number>();
+  // @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<number>();
 
   
   trip: trip = {
@@ -23,8 +23,9 @@ export class SearchComponent implements OnInit {
   constructor(private databus: DataService) { }
   ngOnInit(): void { }
   createBusTrip(): void {
+    this.databus.filterP(this.trip)
     // console.log(this.trip.dateA);
-    this.trip.dateA = new Date(this.trip.dateA);
+/*    this.trip.dateA = new Date(this.trip.dateA);
     this.trip.dateB = new Date(this.trip.dateB);
     this.databus.bustripfilter = this.databus.bustrip2.filter(
       (item) =>
@@ -33,7 +34,7 @@ export class SearchComponent implements OnInit {
         item.date > this.trip.dateA &&
         item.date < this.trip.dateB
     );
-    this.pushArrTrip.emit(1);
+    this.pushArrTrip.emit(1);  */
     
   }
 }

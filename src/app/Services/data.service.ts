@@ -1,13 +1,36 @@
 import { Injectable } from '@angular/core';
-import { from } from 'rxjs';
+import { BehaviorSubject, from, Observable } from 'rxjs';
 import { bustrip } from '../models/bustrip.model';
-// import { bustrip } from '../models/bustrip.model';
+import { trip } from '../models/trip.model';
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  constructor() {}
-  bustripfilter:bustrip[];
+  private bustripfilter: BehaviorSubject<bustrip[]>;
+
+  constructor() {
+    this.bustripfilter=new BehaviorSubject<bustrip[]>([]);
+  }
+  
+  _bustripfilter:bustrip[];
+  filterP(trip: trip): void {
+    trip.dateA = new Date(trip.dateA);
+    trip.dateB = new Date(trip.dateB);
+    this._bustripfilter = this.bustrip2.filter(
+      (item) =>
+        item.source == trip.source &&
+        item.dest == trip.dest &&
+        item.date > trip.dateA &&
+        item.date < trip.dateB
+    );
+    this.bustripfilter.next(this._bustripfilter);
+}
+
+get(): Observable<bustrip[]> {
+    return this.bustripfilter;
+}
   bustrip2: bustrip[] = [
     {
       date: new Date(2021, 5, 6),
