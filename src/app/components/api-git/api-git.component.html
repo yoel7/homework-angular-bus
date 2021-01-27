@@ -1,8 +1,54 @@
-<p>api-git works!</p>
-<label>usar name : <input #usarname type="text"  /></label> 
+
+<input #usarname type="text" value="שם משתמש" />
 <button (click)=gutGitUser(usarname)>saerch</button>
 <ng-container *ngIf="usergit">
-<br><br><br>
-{{usergit.id}}
-
+<br>
+<div class="card text-center">
+    <div class="card-header">
+      נתונים מאתר githeb
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> {{usergit.login}}</h5>
+      <p class="card-text">מספר נתונים על המשתמש :<br>ידידנו הצטרף ל<span>-githeb</span> ב :
+        <span>{{usergit.created_at |date: "dd/mm/yyyy"}}</span></p>
+        <p>{{usergit.login}} פרסם {{usergit.public_repos}} מאגרים פומביים</p>
+        <p>מספר העוקבים אחריו הוא {{usergit.followers}}</p>
+        <p>והוא עוקב אחרי {{usergit.following}}</p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+    <div class="card-footer text-muted">
+      העדכון האחרון של {{usergit.login}} היה ב<span>-{{usergit.updated_at |date: "dd/mm/yyyy  hh:mm"}}</span>
+    </div>
+  </div>
 </ng-container>
+  <!-- "login": "yoel7", --
+  "id": 76557026,
+  "node_id": "MDQ6VXNlcjc2NTU3MDI2",
+  "avatar_url": "https://avatars.githubusercontent.com/u/76557026?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/yoel7",
+  "html_url": "https://github.com/yoel7",
+  "followers_url": "https://api.github.com/users/yoel7/followers",
+  "following_url": "https://api.github.com/users/yoel7/following{/other_user}",
+  "gists_url": "https://api.github.com/users/yoel7/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/yoel7/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/yoel7/subscriptions",
+  "organizations_url": "https://api.github.com/users/yoel7/orgs",
+  "repos_url": "https://api.github.com/users/yoel7/repos",
+  "events_url": "https://api.github.com/users/yoel7/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/yoel7/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "": 1,
+  "public_gists": 0,
+  "": 0,
+  "": 2
+  <!-- "": "2021-01-25T23:43:01Z" -->
