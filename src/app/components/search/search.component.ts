@@ -12,7 +12,7 @@ import { GitApiService } from 'src/app/Services/git-api.service';
 export class SearchComponent implements OnInit {
   @Output() pushArrTrip: EventEmitter<number> = new EventEmitter<number>();
 
-  usergit: any;
+  
   trip: trip = {
     source: 'א',
     dest: 'ב',
@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
     dateB: new Date(2021, 0, 21)
   };
 
-  constructor(private databus: DataService, private htt: GitApiService) { }
+  constructor(private databus: DataService) { }
   ngOnInit(): void { }
   createBusTrip(): void {
     // console.log(this.trip.dateA);
@@ -34,8 +34,6 @@ export class SearchComponent implements OnInit {
         item.date < this.trip.dateB
     );
     this.pushArrTrip.emit(1);
-    this.htt.getU('yoel7').subscribe((a: any) => {
-      this.usergit = a;
-    })
+    
   }
 }
