@@ -1,5 +1,5 @@
 
-<input #usarname type="text" value="שם משתמש" />
+<input #usarname type="text" placeholder='user name at githeb' />
 <button (click)=gutGitUser(usarname)>saerch</button>
 
 <ng-container *ngIf="usergit">
@@ -11,14 +11,14 @@
     <div class="card-body">
       <h5 class="card-title"> {{usergit.login}}</h5>
       <p class="card-text">מספר נתונים על המשתמש :<br>ידידנו הצטרף ל<span>-githeb</span> ב :
-        <span>{{usergit.created_at |date: "dd/mm/yyyy"}}</span></p>
+        <span>{{usergit.created_at |date: "dd/MM/yyyy"}}</span></p>
         <p>{{usergit.login}} פרסם {{usergit.public_repos}} מאגרים פומביים</p>
         <p>מספר העוקבים אחריו הוא {{usergit.followers}}</p>
         <p>והוא עוקב אחרי {{usergit.following}}</p>
       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
     </div>
     <div class="card-footer text-muted">
-      העדכון האחרון של {{usergit.login}} היה ב<span>-{{usergit.updated_at |date: "dd/mm/yyyy  hh:mm"}}</span>
+      העדכון האחרון של {{usergit.login}} היה ב<span>-{{usergit.updated_at |date: "dd/MM/yyyy  hh:mm"}}</span>
     </div>
   </div>
 </ng-container>
