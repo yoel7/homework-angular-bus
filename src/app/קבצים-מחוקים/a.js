@@ -1,25 +1,35 @@
 function crLop(a, b, fun) {
-    var arr = []
-    do {                  //  למה דווקא את זה
-        arr.push(a)
+    var arr = [];
+    do { //  למה דווקא את זה
+        arr.push(a);
         if (b) {
-            if (a==b) break  //   מה יקרה אם נוריד את השורה הזאת
-            if (a < b)  a++
-            else a-- 
-        } else break
-    } while (a< 100000)
+            if (a == b)
+                break; //   מה יקרה אם נוריד את השורה הזאת
+            if (a < b)
+                a++;
+            else
+                a--;
+        }
+        else
+            break;
+    } while (a < 100000);
     if (fun) {
-        lopF(arr, fun);console.log(`ש 10`);
-    } else {
-        lopF(arr, print);console.log(`ש 12`);
+        lopF(arr, fun);
+    }
+    else {
+        lopF(arr, print);
     }
 }
 function lopF(ar, f) {
-    for (let i = 0; i < ar.length; i++) {
+    for (var i = 0; i < ar.length; i++) {
         f(ar[i]);
     }
 }
 function print(item) {
     console.log(item);
 }
-crLop(5)
+// crLop(5);
+// crLop(5, 10);
+// crLop(10, 5);
+var aa=[1,2,3];
+console.log(typeof aa);
