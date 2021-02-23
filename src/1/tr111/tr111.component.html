@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">.mystyle { 
+        width: 100%;
+        padding: 25px;
+        background-color: coral;
+        color: white;
+        font-size: 25px;
+        box-sizing: border-box;
+      }</style> 
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/tr111.component.css">
+    <script type="text/javascript" src="/tr111.js" ></script>
+</head>
+<body>
+    <button (click)="myFunction()">Try it</button>
+
+<div id="myDIV" >
+This is a DIV element.
+</div>
+<!-- <script> 
+function myFunction() {
+     
+     // document.getElementById("myDIV").classList.toggle("mystyle");
+     var element = document.getElementById("myDIV");
+     // עובד //
+     console.log('fff');
+     // element.classList.toggle("mystyle");            //  עובד //
+     //   בצורה ארוכה יותר   עובד //
+     if (element.classList.length==0)
+     element.classList.add("mystyle");
+     else element.classList.remove("mystyle")
+     //  //                  //
+     // if (element.getAttribute.length>0) {        //  לא עבד
+     //      שינוי אטריביוט עובד      !    //עובד //
+     // if (this.a) {
+     //   console.log("הייייוש");
+     //   element.setAttribute("style", "display:block");this.a=false
+     // }
+     // else {element.setAttribute("style", "display:none");this.a=true}
+   //                                      //עובד //
+     
+  }
+  
+ 
+ 
+</script> -->
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+<!-- <p><button onclick="my()">Click Mnnne</button></p>  --
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+
+var id = null;
+var b=false;
+var a=false;
+var pos = 0;
+
+function myMove() {
+    a=!a; if(a) clearInterval(id);
+    else {
+  var elem = document.getElementById("animate");   
+  
+//   clearInterval(id);
+  id = setInterval(frame, 7);
+  function frame() {
+    //   debugger
+    //   for (let index = 0; index < 700; index++) {
+          if (pos<0| pos==350)b=!b;
+          if (b){
+              pos--
+          }else {pos++}
+          elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px";  
+    //   } 
+}
+  } 
+}
+</script>
+
+</body>
+</html>
+ -->

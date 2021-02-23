@@ -28,8 +28,8 @@ function lopF(ar, f) {
 function print(item) {
     console.log(item);
 }
-// crLop(5);
-// crLop(5, 10);
-// crLop(10, 5);
-var aa=[1,2,3];
-console.log(typeof aa);
+crLop(5);
+crLop(5, 10);
+crLop(10, 5);
+// var aa=[1,2,3];
+// console.log(typeof aa);
